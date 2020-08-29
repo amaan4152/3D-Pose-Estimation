@@ -134,29 +134,44 @@ public:
     generator_3D(const std::string & cam_params_path)
     {
         paramReader.readParameters(cam_params_path);
-        cameraProjMatrix = paramReader.getCameraExtrinsics();
+        cameraProjMatrix = paramReader.getCameraMatricies();
         cameraIntrinsics = paramReader.getCameraIntrinsics();
         cameraDistCoeffs = paramReader.getCameraDistortions();
+
+        for(int i = 0; i < cameraProjMatrix.size(); i++)
+        {
+
+        }
     }
 
-    void getKeypoints(const std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>>& datumsPtr)
+    void getKeypoints(const std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> & datumsPtr)
     {
-      if(datumsPtr != nullptr && !datumsPtr->empty())
-      {
-          op::Array<float> arrayBody;
-          const cv::Mat keypoints_body;
-          arrayBody = datumsPtr->at(0)->poseKeypoints;
-          keypoints_body = arrayBody.getConstCvMat();
-      }
-      else
-      {
-        op::opLog("Nullptr or empty datumsPtr found.", op::Priority::High);
-      }
+        if(datumsPtr != nullptr && !datumsPtr->empty())
+        {
+
+            const auto & arrayBody = datumsPtr->at(0)->poseKeypoints;
+            row_size = arrayBody.getSize(1);
+            //assume 1 person
+            //iterate through each body part
+            for(int part = 0; part < row_size; part++)
+            {
+                //get (x,y)
+                keypoints.push_back(cv::Point2f(arrayBody[{0,part,0}], arrayBody[{0,part,1}]));
+
+            }
+        }
+        else
+        {
+            op::opLog("Nullptr or empty datumsPtr found.", op::Priority::High);
+        }
 
     }
+
+    void
 
 private:
     op::CameraParameterReader paramReader;
+    std::vector<cv::Point2f> keypoints;
     const std::vector<op::Matrix> & cameraProjMatricies;
     const std::vector<op::Matrix> & cameraIntrinsics;
     const std::vector<op::Matrix> & cameraDistCoeffs;
@@ -336,6 +351,8 @@ int main(int argc, char *argv[])
 
         // Configuring OpenPose
         op::opLog("Configuring OpenPose...", op::Priority::High);
+        //must be Asynchronous to enable asynch input for multi cam frame capture
+        //and asynch output for retrieving keypoint data from prcessed datumsPtr
         op::Wrapper opWrapper{op::ThreadManagerMode::Asynchronous};
         configureWrapper(opWrapper);
 
