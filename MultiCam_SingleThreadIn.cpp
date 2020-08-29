@@ -12,120 +12,8 @@
 #include <openpose/headers.hpp>
 
 //necessary headers
-#include <thread>
-#include <iostream>
-#include <fstream>
-#include <atomic>
+#include <MultiCameraSys.hpp>
 #include <chrono>
-
-//data to be accessed and modified by any producer threads
-std::atomic<bool> threadBreak(false);
-std::atomic<bool> mClosed(false);
-
-/*
-reference code: https://putuyuwono.wordpress.com/2015/05/29/multi-thread-multi-camera-capture-using-opencv/
-
-This class is to be used to generate an object that initialize all camera objects.
-Each camera is then put on a seperate thread to retrieve frames from them.
-*/
-class inputObj
-{
-public:
-
-    std::vector<std::thread*> threads;
-    std::vector<int> camsId;
-    std::vector<cv::VideoCapture*> cams;
-    std::vector<cv::Mat> inputData;
-
-    inputObj(std::vector<int> camIndicies):
-        camsId{camIndicies}
-    {
-        //initialize cameras
-        inputData.resize(camsId.size());
-        for(int i = 0; i < camsId.size(); i++)
-        {
-            cv::VideoCapture *v;
-            v = new cv::VideoCapture(camsId.at(i));
-            cams.push_back(v);
-            if(!(cams.at(i)->isOpened()))
-            {
-                mClosed.store(true);
-                op::error("No cams opened.", __LINE__, __FUNCTION__, __FILE__);
-            }
-        }
-
-        //put each camera for frame retrieval on a seperate thread.
-        //e.g. camera_A -> thread_A
-        //     camera_B -> thread_B
-        //     ...      ->    ...
-        threadCams();
-    }
-
-    //after threads have finished grabbing frames, join them to main thread and release all camera objects.
-    ~inputObj()
-    {
-        for(int r = 0; r < cams.size(); r++)
-        {
-            threads.at(r)->join();
-            std::cout << "--RELEASE BEGIN--" << std::endl;
-            cams.at(r)->release();
-            std::cout << "--RELEASE SUCCESS--" << std::endl;
-        }
-    }
-
-
-
-private:
-    //capture frames from associated camera index (function to be threaded).
-    void captureFrame(int index)
-    {
-        cv::VideoCapture *vidTemp;
-        vidTemp = cams.at(index);
-        unsigned long long mFc = 0ull;
-        while(!mClosed.load())
-        {
-            cv::Mat frame;
-            std::cout << "--INSIDE THREAD--" << std::endl;
-            (*vidTemp) >> frame;
-            if(frame.empty())
-            {
-                mClosed.store(true);
-                op::error("Empty frame detected, closing program.", __LINE__, __FUNCTION__, __FILE__);
-            }
-            else
-            {
-                inputData.at(index) = frame;
-                frame.release();
-                ++mFc;
-            }
-            if(threadBreak.load())
-            {
-                std::cout << "--EXITING THREAD LOOP--" << std::endl;
-                break;
-            }
-        }
-        (*vidTemp).release();
-    }
-
-    //generate threads to this object
-    void threadCams()
-    {
-        for(int i = 0; i < cams.size(); i++)
-        {
-            std::cout << "--STARTING THREADS--" << std::endl;
-            std::thread *t;
-            t = new std::thread(&inputObj::captureFrame, this, i);
-            threads.push_back(t);
-            std::cout << "Thread ID:" << threads.at(i)->get_id() << " being instantiated." << std::endl;
-        }
-        if(threads.size() != cams.size())
-        {
-            op::error("PUSHING THREADS ERROR", __LINE__, __FUNCTION__, __FILE__);
-        }
-    }
-};
-
-
 
 class generator_3D
 {
@@ -363,7 +251,7 @@ int main(int argc, char *argv[])
 
         //set up all user objects
         std::vector<int> cameras{0, 1};
-        inputObj inputReciever = inputObj(cameras);
+        multiCameraSys_TH inputReciever = multiCameraSys_TH(cameras);
         std::vector<cv::Mat> output;
         bool userWantsToExit = false;
         //begin user process to retrieve captured frames from each user thread
@@ -409,7 +297,7 @@ int main(int argc, char *argv[])
         //cause all user threads to break out of infintie while loop to capture frames
         threadBreak.store(true);
         //release all cameras
-        inputReciever.~inputObj();
+        inputReciever.~multiCameraSys_TH();
 
 
 
