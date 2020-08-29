@@ -141,7 +141,18 @@ public:
 
     void getKeypoints(const std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>>& datumsPtr)
     {
-        
+      if(datumsPtr != nullptr && !datumsPtr->empty())
+      {
+          op::Array<float> arrayBody;
+          const cv::Mat keypoints_body;
+          arrayBody = datumsPtr->at(0)->poseKeypoints;
+          keypoints_body = arrayBody.getConstCvMat();
+      }
+      else
+      {
+        op::opLog("Nullptr or empty datumsPtr found.", op::Priority::High);
+      }
+
     }
 
 private:
