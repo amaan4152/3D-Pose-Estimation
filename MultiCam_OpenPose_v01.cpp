@@ -8,6 +8,9 @@
 // Command-line user interface
 #define OPENPOSE_FLAGS_DISABLE_PRODUCER
 #include <openpose/flags.hpp>
+//oopenpose dependencies
+#include <openpose/headers.hpp>
+
 
 //necessary headers
 #include "MultiCameraSys.hpp"
@@ -66,7 +69,6 @@ public:
 
         const auto & cam_projMat_00 = OP_OP2CVCONSTMAT(cameraMatrices.at(0));
         const auto & cam_projMat_01 = OP_OP2CVCONSTMAT(cameraMatrices.at(1));
-        cv::Mat output_4D;
         cv::triangulatePoints(cam_projMat_00, cam_projMat_01, undistKeypoints.at(0), undistKeypoints.at(1), output_4D);
     }
 
@@ -79,6 +81,9 @@ public:
 private:
     op::CameraParameterReader paramReader;
     std::vector<std::vector<cv::Point2f>> keypoints;
+    cv::Mat output_4D;
+    std::vector<cv::Vec3f>
+
 
 
 };
@@ -269,7 +274,7 @@ int main(int argc, char *argv[])
 
         //set up all user objects
         std::vector<int> cameras{0, 1};
-        multiCameraSys_TH inputReciever = multiCameraSys_TH(cameras);
+        MultiCam inputReciever = MultiCam(cameras);
         std::vector<cv::Mat> output;
         bool userWantsToExit = false;
         //begin user process to retrieve captured frames from each user thread
@@ -315,7 +320,7 @@ int main(int argc, char *argv[])
         //cause all user threads to break out of infintie while loop to capture frames
         threadBreak.store(true);
         //release all cameras
-        inputReciever.~multiCameraSys_TH();
+        inputReciever.~MultiCam();
 
 
 

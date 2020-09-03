@@ -3,11 +3,11 @@
 // In this function, the user can implement its own way to create frames (e.g., reading his own folder of images)
 // and emplaces/pushes the frames to OpenPose.
 
-// Third-party dependencies
-#include <opencv2/opencv.hpp>
+
 // Command-line user interface
 #define OPENPOSE_FLAGS_DISABLE_PRODUCER
 #include <openpose/flags.hpp>
+
 // OpenPose dependencies
 #include <openpose/headers.hpp>
 
@@ -251,7 +251,7 @@ int main(int argc, char *argv[])
 
         //set up all user objects
         std::vector<int> cameras{0, 1};
-        multiCameraSys_TH inputReciever = multiCameraSys_TH(cameras);
+        MultiCam inputReciever = MultiCam(cameras);
         std::vector<cv::Mat> output;
         bool userWantsToExit = false;
         //begin user process to retrieve captured frames from each user thread
@@ -297,7 +297,7 @@ int main(int argc, char *argv[])
         //cause all user threads to break out of infintie while loop to capture frames
         threadBreak.store(true);
         //release all cameras
-        inputReciever.~multiCameraSys_TH();
+        inputReciever.~MultiCam();
 
 
 
