@@ -1,6 +1,6 @@
 //OpenPose 3D Keypoint Capture
 //Aaron Schmitz
-//Current Version: 0.3.1
+//Current Version: 0.3.0
 
 
 // Third-party dependencies
@@ -388,12 +388,12 @@ int cameraCalibration()
 		cv::cvtColor(frame2, gray2, cv::COLOR_BGR2GRAY);
 
 		//show grayscale images
-		cv::imshow("gray1", gray1); 
+		cv::imshow("gray1", gray1);
 		cv::imshow("gray2", gray2);
-		if (cv::waitKey(30) >= 0) 
+		if (cv::waitKey(30) >= 0)
 			break;
 
-		
+
 		//if either camera is not running, report error
 		if (frame1.empty() | frame2.empty())
 		{
@@ -474,11 +474,11 @@ int cameraCalibration()
 	std::cout << "Camera Matrix 2\n";
 	std::cout << cameraMatrix2 << std::endl;
 
-	
+
 	std::cout << "Running stereo calibration ...\n";
 	std::cout << "Can take up to 10 minutes depending on frame count, please be patient!\n";
 
-	
+
 
 	//stereo calibration
 	double rms = stereoCalibrate(objectPoints, imagePoints1, imagePoints2,
@@ -506,7 +506,7 @@ int cameraCalibration()
 	}
 	else
 		std::cout << "Error: can not save the intrinsic parameters\n";
-	
+
 	//Stereo Rectification
 	std::cout << "Calculating rectification transforms..." << rms << std::endl;
 	stereoRectify(cameraMatrix1, distCoeffs1,
@@ -523,7 +523,7 @@ int cameraCalibration()
 	}
 	else
 		std::cout << "Error: can not save the extrinsic parameters\n";
-	
+
 
 	return 0;
 }
@@ -667,7 +667,7 @@ void triangulatePoints()
 			op::opLog("Z: " + std::to_string(points3D.at<double>(2, i)), op::Priority::High);
 		}
 	}
-	
+
 	if (handL)
 	{
 		//Left Hand
@@ -717,11 +717,11 @@ void triangulatePoints()
 	{
 		//Right hand
 		//get keypoints
-		
+
 		camera1DistortedH = camera1CVR;
 		camera2DistortedH = camera2CVR;
 
-		
+
 
 		//undistort and correct points
 		cv::undistortPoints(camera1DistortedH, camera1UndistortedH, cameraMatrix1, distCoeffs1, R1, P1);
@@ -735,7 +735,7 @@ void triangulatePoints()
 		//triangulate points
 		cv::triangulatePoints(P1, P2, camera1toTriangulateH, camera2toTriangulateH, points4DH);
 
-		
+
 
 		//for each keypoint
 		std::cout << "-------------Right Hand Keypoint Output--------------" << std::endl;
@@ -917,7 +917,7 @@ int cameraCapture3D()
 			if((numberPeopleDetected != 0 && body) || (numberHandLDetected !=0 && handL) || (numberHandRDetected !=0 && handR))
 				triangulatePoints();
 
-			
+
 
 			//output frame
 			cv::imshow("camera 1", frame1);
