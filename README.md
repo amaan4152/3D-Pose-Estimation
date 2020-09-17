@@ -25,7 +25,7 @@ Current Implementation includes:
 
 To-Do:
 
--Create GUI with integrated user options (Aaron
+-Create GUI with integrated user options (Aaron)
 
 -Translate 3D coordinates to skeleton for visualization in Blender (Amaan)
 
