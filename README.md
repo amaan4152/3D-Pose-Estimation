@@ -17,26 +17,24 @@ Current Implementation includes:
 
 -Multithreading to capture camera frames simultaneously
 
+-Integrate multithreading with triangulation
+
+-Easily selectable user options (Aaron)
+
 ---------------------------------------------------------------------------
 
 To-Do:
 
--Separate OpenPose dependency from core functions (Everyone)
-
--Integrate multithreading with triangulation (Amaan)
-
--Easily selectable user options (Aaron)
+-Create GUI with integrated user options (Aaron
 
 -Translate 3D coordinates to skeleton for visualization in Blender (Amaan)
-
--Translate 3D coordinates to skeleton for visualization in Unity (Aaron)
-
--Android and IOS application to capture frames from two phones instead of two USB webcams (Aaron)
 
 ---------------------------------------------------------------------------
 
 Future Plans:
 
+-Android and IOS application to capture frames from two phones instead of two USB webcams (Aaron)
+
 -Create custom models to use instead of OpenPose using TensorFlow
 
--Create GUI with integrated user options
+-Translate 3D coordinates to skeleton for visualization in Unity (Aaron)
