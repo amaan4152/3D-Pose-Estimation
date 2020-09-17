@@ -9,15 +9,15 @@ Current Team: Aaron and Amaan
 
 Current Implementation includes:
 
--OpenCV stereo camera calibration
+-OpenCV stereo camera calibration (Aaron)
 
--Keypoint recovery using OpenPose and two USB cameras
+-Keypoint recovery using OpenPose and two USB cameras (Aaron)
 
--Triangulation using camera intrinsics/extrinsics and 2D keypoint data
+-Triangulation using camera intrinsics/extrinsics and 2D keypoint data (Aaron)
 
--Multithreading to capture camera frames simultaneously
+-Multithreading to capture camera frames simultaneously (Amaan)
 
--Integrate multithreading with triangulation
+-Integrate multithreading with triangulation (Amaan)
 
 -Easily selectable user options (Aaron)
 
