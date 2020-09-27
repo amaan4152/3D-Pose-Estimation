@@ -1,0 +1,21 @@
+Weekly Update
+Amaan and Aaron
+
+---------Week 1----------
+  Aaron created a working model of a 3D pose estimator
+using two USB cameras, OpenCV and OpenPose over the summer.
+Amaan created this GitHub and worked on creating an implementation of
+multithreading using OpenPose.
+---------Week 2----------
+  Aaron presented his work to NIST on 9/8, and Amaan finished his 
+multithreading implementation. Aaron also created a task list
+to assign and track upcoming tasks.
+---------Week 3----------
+  Aaron revised his pose estimation program to include hand support,
+allow for easy switching between keypoints and created more well-defined
+user options. Amaan fully implemented his multithreading into Aaron's
+code, so that a single unified program was created.
+---------Week 4----------
+  Aaron researched GUI work environments to use with the program, and
+Amaan worked on Blender support to visualize the 3D keypoint output.
+The GUI was narrowed down to two choices: electronJS and Qt.
