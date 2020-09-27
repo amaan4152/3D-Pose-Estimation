@@ -27,6 +27,8 @@ To-Do:
 
 -Create GUI with integrated user options (Aaron)
 
+-Translate 3D coordinates to skeleton for visualization in Unity (Aaron)
+
 -Translate 3D coordinates to skeleton for visualization in Blender (Amaan)
 
 ---------------------------------------------------------------------------
@@ -36,5 +38,3 @@ Future Plans:
 -Android and IOS application to capture frames from two phones instead of two USB webcams (Aaron)
 
 -Create custom models to use instead of OpenPose using TensorFlow
-
--Translate 3D coordinates to skeleton for visualization in Unity (Aaron)
