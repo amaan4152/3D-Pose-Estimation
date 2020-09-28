@@ -29,6 +29,8 @@ To-Do:
 
 -Translate 3D coordinates to skeleton for visualization in Unity (Aaron)
 
+-Add support to wirelessly send data to a Raspberry Pi (Aaron)
+
 -Translate 3D coordinates to skeleton for visualization in Blender (Amaan)
 
 ---------------------------------------------------------------------------
