@@ -19,3 +19,9 @@ code, so that a single unified program was created.
   Aaron researched GUI work environments to use with the program, and
 Amaan worked on Blender support to visualize the 3D keypoint output.
 The GUI was narrowed down to two choices: electronJS and Qt.
+---------Week 5----------
+  Aaron created test environments in electronJS and Qt, and decided to
+continue working with electronJS because of its lightweight nature. He
+also started to learn Unity, and is working on creating a 3D worldspace
+to represent a point cloud. Amaan also worked with electronJS and has
+created a skeleton rig to be synced using the blender API.
