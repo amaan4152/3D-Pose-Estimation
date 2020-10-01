@@ -22,8 +22,11 @@ Current Implementation includes:
 -Easily selectable user options (Aaron)
 
 ---------------------------------------------------------------------------
-
 To-Do:
+
+*-Output 3D matrix and linked keypoints as JSON file (Aaron)
+
+*-Integrate electronJS with C++  (Amaan)
 
 -Create GUI with integrated user options (Aaron)
 
@@ -32,8 +35,6 @@ To-Do:
 -Add support to wirelessly send data to a Raspberry Pi or as a radio signal (Aaron)
 
 -Translate 3D coordinates to skeleton for visualization in Blender (Amaan)
-
--Output 3D matrix and linked keypoints as JSON file (Amaan/Aaron)
 
 ---------------------------------------------------------------------------
 
