@@ -33,6 +33,8 @@ To-Do:
 
 -Translate 3D coordinates to skeleton for visualization in Blender (Amaan)
 
+-Output 3D matrix and linked keypoints as JSON file (Amaan/Aaron)
+
 ---------------------------------------------------------------------------
 
 Future Plans:
