@@ -25,3 +25,16 @@ continue working with electronJS because of its lightweight nature. He
 also started to learn Unity, and is working on creating a 3D worldspace
 to represent a point cloud. Amaan also worked with electronJS and has
 created a skeleton rig to be synced using the blender API.
+
+  Amaan parsed triangulated 3D coordinates of each keypoint into a JSON 
+file. He then, created a python script to parse through the JSON outfile 
+in Blender and generate an Armature object with bone objects that contain 
+a head-tail pair of coordinates that correspond to their approprioate keypoint
+3D coordinates from the JSON outfile.
+  One frame of the 3D coordinates of the head keypoints were used for testing. 
+The results were not clean, and inconsistent. In order to produce clean visual
+and consistent results, the joint-angle has to be computed so a preset skeletal 
+structure can have its pose apporpriately updated. The joint-angle has to be
+represented as quaternions to avoid Gimbal Lock. The armature's 3D location is
+to be calculated by either finding the average of all Z coordinates of all keypoints
+or select the main body's Z coordinate. This is to be done at the moment.
