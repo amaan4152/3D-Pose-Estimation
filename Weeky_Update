@@ -25,7 +25,14 @@ continue working with electronJS because of its lightweight nature. He
 also started to learn Unity, and is working on creating a 3D worldspace
 to represent a point cloud. Amaan also worked with electronJS and has
 created a skeleton rig to be synced using the blender API.
-
+---------Week 6----------
+  Aaron created a mock GUI on paper for a launcher for the program. 
+The program was split into three modular components: the source, which
+is the cameras that frames are collected from; the model, which refers to
+the specific ML program that analyzes the frames and collects 3D keypoint
+data; and the output, which is the display for which the information is
+shown to the user. A modular design was prioritized so that user options
+could be added without redesigning the UI framework.
   Amaan parsed triangulated 3D coordinates of each keypoint into a JSON 
 file. He then, created a python script to parse through the JSON outfile 
 in Blender and generate an Armature object with bone objects that contain 
