@@ -45,3 +45,7 @@ structure can have its pose apporpriately updated. The joint-angle has to be
 represented as quaternions to avoid Gimbal Lock. The armature's 3D location is
 to be calculated by either finding the average of all Z coordinates of all keypoints
 or select the main body's Z coordinate. This is to be done at the moment.
+---------Week 7----------
+  Aaron worked on implementing the GUI with electronJS. He started with a boilerplate
+called electron-forge and worked on familiarizing himself with javascript and html.
+He implemented the framework for the mock GUI, but more work is necessary to complete it.
