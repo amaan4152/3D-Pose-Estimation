@@ -7,11 +7,12 @@
 #include <iostream>
 #include <thread>
 #include <atomic>
+#include <chrono>
 
 //data to be accessed and modified by any producer threads
 extern std::atomic<bool> threadBreak(false);
 extern std::atomic<bool> mClosed(false);
-cv::setNumThreads(0); //disables multi-threading for opencv
+
 
 /*
 reference code: https://putuyuwono.wordpress.com/2015/05/29/multi-thread-multi-camera-capture-using-opencv/
@@ -20,7 +21,8 @@ This class is to be used to generate an object that initialize all camera object
 Each camera is then put on a seperate thread to retrieve frames from them.
 */
 
-class MultiCam
+//header
+class MultiCam_TH
 {
 public:
     std::vector<std::thread*> threads;
@@ -28,8 +30,8 @@ public:
     std::vector<cv::VideoCapture*> cams;
     std::vector<cv::Mat> inputData;
 
-    MultiCam(std::vector<int> camIndicies);
-    ~MultiCam();
+    MultiCam_TH(std::vector<int> camIndicies);
+    ~MultiCam_TH();
 
 private:
 
@@ -42,7 +44,7 @@ private:
 
 
 //implementation
-MultiCam::MultiCam(std::vector<int> camIndicies):
+MultiCam_TH::MultiCam_TH(std::vector<int> camIndicies):
     camsId{camIndicies}
 {
     //initialize cameras
@@ -62,24 +64,28 @@ MultiCam::MultiCam(std::vector<int> camIndicies):
     //e.g. camera_A -> thread_A
     //     camera_B -> thread_B
     //     ...      ->    ...
-    MultiCam::threadCams();
+    MultiCam_TH::threadCams();
 }
+
 //after threads have finished grabbing frames, join them to main thread and release all camera objects.
-MultiCam::~MultiCam()
+MultiCam_TH::~MultiCam_TH()
 {
+    threadBreak.store(true);
+    mClosed.store(true);
     for(int r = 0; r < cams.size(); r++)
     {
         threads.at(r)->join();
         cams.at(r)->release();
+        std::cout << "All cameras have been closed..." << std::endl;
     }
 }
 
+
 //capture frames from associated camera index (function to be threaded).
-void MultiCam::captureFrame(int index)
+void MultiCam_TH::captureFrame(int index)
 {
     cv::VideoCapture *vidTemp;
     vidTemp = cams.at(index);
-    unsigned long long mFc = 0ull;
     while(!mClosed.load())
     {
         cv::Mat frame;
@@ -93,25 +99,25 @@ void MultiCam::captureFrame(int index)
         {
             inputData.at(index) = frame;
             frame.release();
-            ++mFc;
         }
         if(threadBreak.load())
         {
-            std::cout << "--EXITING THREAD LOOP--" << std::endl;
+            std::cout << "--EXITING THREAD LOOP #" << index << "--" << std::endl;
             break;
         }
+        std::this_thread::sleep_for(std::chrono::milliseconds(1)); //for safety
     }
     (*vidTemp).release();
 }
 
 //generate threads to this object
-void MultiCam::threadCams()
+void MultiCam_TH::threadCams()
 {
     for(int i = 0; i < cams.size(); i++)
     {
         std::cout << "--STARTING THREADS--" << std::endl;
         std::thread *t;
-        t = new std::thread(&MultiCam::captureFrame, this, i);
+        t = new std::thread(&MultiCam_TH::captureFrame, this, i);
         threads.push_back(t);
         std::cout << "Thread ID:" << threads.at(i)->get_id() << " being instantiated." << std::endl;
     }
@@ -120,6 +126,9 @@ void MultiCam::threadCams()
         std::cerr << "PUSHING THREADS ERROR" << std::endl;
     }
 }
+
+
+
 
 
 #endif //MULTI_CAMERA_SYS_HPP
