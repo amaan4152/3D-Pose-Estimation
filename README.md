@@ -21,9 +21,10 @@ Current Implementation includes:
 
 -Easily selectable user options (Aaron)
 
+-Create 2D annotation software using OpenCV (Aaron)
+
 ---------------------------------------------------------------------------
 To-Do:
--Create 2D annotation software using OpenCV (Aaron)
 
 *-Output 3D matrix and linked keypoints as JSON file (Aaron)
 
