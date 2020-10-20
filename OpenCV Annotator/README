@@ -1,0 +1,5 @@
+OpenCV annotator
+Runs through a directory of .jpg files, allows the user to annotate a variable number of keypoints. Outputs as an individual .csv file for each image file.
+Usage is pretty self-explanatory, read through the comments or contact me if you're confused.
+Enter directory, click to select point, press any key to move to the next keypoint. Repeat until done.
+Tips: copy-paste image directory using file browser instead of typing it. .csv files are in the image directory.
