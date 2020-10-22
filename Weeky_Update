@@ -49,7 +49,10 @@ or select the main body's Z coordinate. This is to be done at the moment.
   Aaron worked on implementing the GUI with electronJS. He started with a boilerplate
 called electron-forge and worked on familiarizing himself with javascript and html.
 He implemented the framework for the mock GUI, but more work is necessary to complete it.
+  Amaan successfully synced Blender frames with Openpose frames. He has been implenting various
+interpolation functions in Blender for smooth rotational animations. 
 ---------Week 8----------
   Aaron created a 2D annotator using OpenCV for the evaluation team to use. It runs through a directory, 
 checks for image files, and allows the user to annotate a variable number of keypoints. It then outputs a
 csv file for each image.
+  Amaan is currently working on getting rid of rotational extremeties that are high in frequency. 
