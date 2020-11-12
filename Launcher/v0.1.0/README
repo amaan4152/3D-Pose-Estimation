@@ -1,0 +1,3 @@
+Rudimentary version of GUI by Aaron
+Requires electronJS (https://www.electronjs.org/) and electronForge (https://www.electronforge.io/)
+To work on it, make an instance of electron forge and replace the files in the generated src folder with these.
