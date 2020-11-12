@@ -63,6 +63,8 @@ rotational updates has also been added to the program through Modal Timer Operat
 compared to the last rig test. This was done through altering local coordinate axis and linear interpolation. 
 ---------Week 10----------
   Aaron worked on implementing the GUI using electronJS, javascript and HTML
-  
+  Amaan read papers on global-local coordinate axis transformations and various pose angle calc implementations
+such as atan2 and dot product. 
 ---------Week 11----------
-  Aaron completed the framework for the GUI.
+  Aaron completed the framework for the GUI. 
+Amaan attempted to replace current rotation configuration for current Blender rig with the local->global rotational matrix transformations.
