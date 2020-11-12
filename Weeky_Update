@@ -57,6 +57,12 @@ checks for image files, and allows the user to annotate a variable number of key
 csv file for each image.
   Amaan is currently working on getting rid of rotational extremeties that are high in frequency. 
 ---------Week 9----------
+  Aaron visited his sister.
   Amaan fixed a lot of issues with the rotational smoothness and syncing of the Blender rig. Real-time
 rotational updates has also been added to the program through Modal Timer Operator. The results are not perfect, but have improved drastically
 compared to the last rig test. This was done through altering local coordinate axis and linear interpolation. 
+---------Week 10----------
+  Aaron worked on implementing the GUI using electronJS, javascript and HTML
+  
+---------Week 11----------
+  Aaron completed the framework for the GUI.
