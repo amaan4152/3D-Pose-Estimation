@@ -39,40 +39,31 @@ class ModalTimerOperator(bpy.types.Operator):
         return q
     
     def new_pose(self, name, h, t):
-        b = self.bones[name]
-        u = b.vector.normalized() #vector of current limb pose from preset skeleton
+         b = self.bones[name]
         p0 = mathutils.Vector(self.points[str(h)])
-        p1 = mathutils.Vector(self.points[str(t)])
+        p1 = mathutils.Vector(self.points[str(t)]) 
         v = p1 - p0 #vector of new limb pose from point cloud
-        #v.z *= -1
         v.normalized()
-        if "right" in name:
+        #v.z *= -1 #ONLY FOR RIG CHAR MODEL
+        if "right" in name: #rotate all axis of right hand side of arm by -90 degrees about Z axis
             right_rot = mathutils.Matrix.Rotation(math.radians(-90), 3, 'Z')
-            u.rotate(right_rot)
             v.rotate(right_rot)
-        if "left" in name:
+        if "left" in name: #rotate all axis of left hand side of arm by 90 degrees about Z axis
             left_rot = mathutils.Matrix.Rotation(math.radians(90), 3, 'Z')
-            u.rotate(left_rot)
             v.rotate(left_rot)
-        theta = u.angle(v)
-        print("\n---" + name + "----\n")    
-        print(theta*(180/3.1415))
-        print("-------\n")
-        axis = u.cross(v).normalized() #axis of rotation 
-        quat = mathutils.Quaternion(axis, theta) #axis-angle -> quaternion
-        init_q = b.rotation_quaternion.copy()
-        quat = self.lerp(init_q.normalized(), quat.normalized(), 0.5)
+        
+        quat = v.to_track_quat('Y', 'Z') #get quaternion from bone (with proper coordinate axis) to new vector orientation
+        init_q = b.rotation_quaternion.copy() #get quaternion current bone
+        quat = self.lerp(init_q.normalized(), quat.normalized(), 0.35) #LERP between current bone quaternion to new quaternion
         b.rotation_mode = 'QUATERNION'
         b.rotation_quaternion = quat.normalized()
-        b.keyframe_insert(data_path="rotation_quaternion", index=-1)   
         
     def reset(self):
         for b in self.bones: 
             b.rotation_quaternion = (1, 0, 0, 0) #identity quaternion
-            b.keyframe_insert(data_path="rotation_quaternion", index=-1)
          
     def update(self):
-        #self.new_pose("body", 8, 1)
+        self.new_pose("body", 8, 1)
         
         self.new_pose("neck", 1, 0)
         
@@ -90,9 +81,7 @@ class ModalTimerOperator(bpy.types.Operator):
             return {'CANCELLED'}
 
         if event.type == 'TIMER':
-            print("=================\n")
-            #self.scn.frame_set(frame)
-            #time.sleep(3)
+            print("=================\n") #debug console
             prev_frame = self.frame
             try:
                 self.f.seek(0,0)
@@ -111,7 +100,6 @@ class ModalTimerOperator(bpy.types.Operator):
                     self.points[str(key)] = coordinates['xyz']            
                 if self.delta_fr > 0: 
                     self.update()
-                #self.scn.frame_set(frame*3)
             except ValueError:
                 print("\nCORRUPTION!\n")
 
