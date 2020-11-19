@@ -68,3 +68,5 @@ such as atan2 and dot product.
 ---------Week 11----------
   Aaron completed the framework for the GUI. 
 Amaan attempted to replace current rotation configuration for current Blender rig with the local->global rotational matrix transformations.
+---------Week 12----------
+Amaan has finished pose-Blender rigging. All issues have been fixed all with a hidden function in Blender Python API. I cry. 
