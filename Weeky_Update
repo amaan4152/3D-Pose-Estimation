@@ -73,3 +73,5 @@ Aaron continued cleaning up the GUI and worked on a wireless connection between 
 Amaan has finished pose-Blender rigging. All issues have been fixed all with a hidden function in Blender Python API. I cry. 
 Amaan also proceeded with trial test on imported character rig. Pose syncing wasn't the best due to the model having
 a skeleton setup of its own causing setup issues. 
+---------Week 13----------
+Aaron put together a simple way to connect to a Pi over the internet, but needs to make sure that security permissions are ok for Pia.
