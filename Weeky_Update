@@ -75,10 +75,13 @@ Amaan also proceeded with trial test on imported character rig. Pose syncing was
 a skeleton setup of its own causing setup issues. 
 ---------Week 13----------
 Aaron put together a simple way to connect to a Pi over the internet, but needs to make sure that security permissions are ok for Pia.
-
+Amaan was learning how to rig and weight paint intricate meshes with a default armatur object in Blender. 
 ---------Week 14----------
 Aaron created an MQTT server using the open-source distributor Mosquitto on a Windows subsystem for Linux to create a system where data can be distributed and protected
 between devices, to be connected to Pia's hand, phone cameras and the GUI/Main program.
-
+Amaan imported a sample free model and rigged the default aramture for a clean Openpose-Blender sync. 
 ---------Week 15----------
 Aaron tested the VR setup of the Oculus Quest, but focused mainly on presentation prep and finals.
+Amaan attempted to setup a camera space in the lab at Cooper, but the Autonomy Lab laptop had issues with making
+the Openpose build due to "pthreads" library issues; this is a resolvable problem, probably due to the library not being 
+in PATH, needs Caffe dependency installed separately, or needs updates. 
