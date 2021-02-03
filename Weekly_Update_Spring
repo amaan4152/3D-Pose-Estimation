@@ -1,1 +1,8 @@
 WEEKLY UPDATE - AARON AND AMAAN - SPRING SEMESTER
+
+-----Week 1-----
+Aaron figured out how to generate and implement DLLs, allowing C++ code to work through Unity and its C# scripting. See 
+https://levelup.gitconnected.com/integrating-native-c-c-libraries-with-unity-as-plugins-a-step-by-step-guide-17ad70c2e3b4
+as a guideline to do so. He also worked through creating new project files (required for DLLs) through Visual Studio 2017
+that work with OpenPose using https://github.com/quickgrid/Setup-Guide/blob/master/README.md#windows-10-cmu-openpose-setup-visual-studio-2019-cmake-nvidia-gpu .
+NOTE: the installation method is untested, only the visual studio setup is.
