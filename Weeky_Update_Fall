@@ -86,3 +86,5 @@ issues related to Facebook.
 Amaan attempted to setup a camera space in the lab at Cooper, but the Autonomy Lab laptop had issues with making
 the Openpose build due to "pthreads" library issues; this is a resolvable problem, probably due to the library not being 
 in PATH, needs Caffe dependency installed separately, or needs updates. 
+---------Week 16----------
+Amaan configured the Aaron-Amaan code in the Linux system; setup Blender code as well. Still working on Blender documentation writeup. 
