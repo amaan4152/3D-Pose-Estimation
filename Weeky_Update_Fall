@@ -88,3 +88,6 @@ the Openpose build due to "pthreads" library issues; this is a resolvable proble
 in PATH, needs Caffe dependency installed separately, or needs updates. 
 ---------Week 16----------
 Amaan configured the Aaron-Amaan code in the Linux system; setup Blender code as well. Still working on Blender documentation writeup. 
+---------Week 17----------
+Amaan was reading upon different calibration methods; currently working on calibrating the stereo camera setup with the laptop at Cooper
+and packaging the Blender demo program. 
