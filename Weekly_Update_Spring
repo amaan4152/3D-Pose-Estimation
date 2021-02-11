@@ -6,3 +6,7 @@ https://levelup.gitconnected.com/integrating-native-c-c-libraries-with-unity-as-
 as a guideline to do so. He also worked through creating new project files (required for DLLs) through Visual Studio 2017
 that work with OpenPose using https://github.com/quickgrid/Setup-Guide/blob/master/README.md#windows-10-cmu-openpose-setup-visual-studio-2019-cmake-nvidia-gpu .
 NOTE: the installation method is untested, only the visual studio setup is.
+
+-----Week 2-----
+Aaron started working on a unity skeleton rig. The current plan is to use the multi-position constraint and the multi-rotation constraint in conjunction with
+the c++ program to work in real time with an interactive skeleton, while also adding on the Oculus head as the 'base' of the rig.
