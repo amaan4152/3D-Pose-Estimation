@@ -7,6 +7,18 @@ as a guideline to do so. He also worked through creating new project files (requ
 that work with OpenPose using https://github.com/quickgrid/Setup-Guide/blob/master/README.md#windows-10-cmu-openpose-setup-visual-studio-2019-cmake-nvidia-gpu .
 NOTE: the installation method is untested, only the visual studio setup is.
 
+Amaan attempted to setup a camera space in the lab at Cooper, but the Autonomy Lab laptop had issues with making
+the Openpose build due to "pthreads" library issues; this is a resolvable problem, probably due to the library not being 
+in PATH, needs Caffe dependency installed separately, or needs updates.
+
 -----Week 2-----
 Aaron started working on a unity skeleton rig. The current plan is to use the multi-position constraint and the multi-rotation constraint in conjunction with
 the c++ program to work in real time with an interactive skeleton, while also adding on the Oculus head as the 'base' of the rig.
+
+Amaan configured the Aaron-Amaan code in the Linux system; setup Blender code as well. Still working on Blender documentation writeup.
+Was reading upon different calibration methods; currently working on calibrating the stereo camera setup with the laptop at Cooper
+and packaging the Blender demo program.
+
+-----Week 3-----
+Amaan met up with Lucia and Esther to discuss a plan on how to automate annotation process to generate a training dataset. In search for existing 
+automated annotation programs and currently developing a program to setup an automated annotation program. 
