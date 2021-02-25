@@ -20,5 +20,11 @@ Was reading upon different calibration methods; currently working on calibrating
 and packaging the Blender demo program.
 
 -----Week 3-----
+Aaron continued work on the skeleton rig.
+
 Amaan met up with Lucia and Esther to discuss a plan on how to automate annotation process to generate a training dataset. In search for existing 
 automated annotation programs and currently developing a program to setup an automated annotation program. 
+
+-----Week 4-----
+Aaron decided to shift from DLLs to using JSON data due to difficulties conbining the unity and C++ code without stopping the program. He decided on
+what is considered a desireable open-source JSON generator called RapidJSON (https://rapidjson.org/) and is working to implement it into the original code and C#.
