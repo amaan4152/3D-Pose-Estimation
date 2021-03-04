@@ -32,3 +32,6 @@ with Lucia and Esther on implementing a semi-supervised CNN for generating an au
 
 Aaron decided to shift from DLLs to using JSON data due to difficulties conbining the unity and C++ code without stopping the program. He decided on
 what is considered a desireable open-source JSON generator called RapidJSON (https://rapidjson.org/) and is working to implement it into the original code and C#.
+
+-----Week 5-----
+Aaron put together the VIP video, and successfully imported 3D keypoint data to control a game object in Unity using its built-in JSON API.
