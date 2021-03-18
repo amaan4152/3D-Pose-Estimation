@@ -36,5 +36,13 @@ what is considered a desireable open-source JSON generator called RapidJSON (htt
 -----Week 5-----
 Aaron put together the VIP video, and successfully imported 3D keypoint data to control a game object in Unity using its built-in JSON API.
 
+Amaan is still working on fixing the calibration issue in laptop.
+
 -----Week 6-----
 Aaron continued working on improving the Unity model.
+
+Amaan is still working on fixing calibration issue in laptop. 
+
+-----Week 7-----
+Amaan developed script to set up Kahan openpose with 3D pose estimation code; working on recording keypoint data in Blender; 
+still working on fixing calibration issue for laptop.
