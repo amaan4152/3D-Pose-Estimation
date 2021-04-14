@@ -50,3 +50,9 @@ still working on fixing calibration issue for laptop.
 Aaron switched from the standard Animation Controller to use the Animation Rigging preview in Unity. It is designed for real-time animation edits, instead of relying
 on pre-built animations that make real-time updates extremely difficult with the controller. He implemented a way to control the arms of a model using inverse kinematics,
 and is working on combining the previous JSON output of keypoint data with the new IK-compatible real-time rig.
+
+-----Week 8-----
+Aaron focused on exams.
+
+-----Week 9-----
+Aaron worked on integrating the Unity IK rig with the keypoint output from the detection code.
