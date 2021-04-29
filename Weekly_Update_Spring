@@ -56,3 +56,10 @@ Aaron focused on exams.
 
 -----Week 9-----
 Aaron worked on integrating the Unity IK rig with the keypoint output from the detection code.
+
+-----Week 10-----
+Aaron prepared and submitted the poster and abstract for the SIGGRAPH 2021 Conference.
+
+-----Week 11-----
+Aaron further tested the calibration issues with the software to make sure it was a program error. He tested it with a checkerboard on a white background and with less frames,
+but still had issues with the length of time for stereo calibration.
