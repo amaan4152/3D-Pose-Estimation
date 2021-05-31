@@ -1,47 +1,31 @@
-# 3D-Pose-Estimation
-Utilizing OpenPose to estimate 2D pose and transform into 3D pose with stereo camera system. 
+## Team
+  **3D Pose Estimation Team:**  
+&nbsp;&nbsp;&nbsp;&nbsp;[Amaan Rahman](mailto:amaan.rahman@cooper.edu)  
+&nbsp;&nbsp;&nbsp;&nbsp;[Aaron Schmitz](mailto:aaron.schmitz@cooper.edu)  
+    
+  **Jetson Nano Team:**  
+&nbsp;&nbsp;&nbsp;&nbsp;Alexa Jakob  
 
-Send any questions to aaron.schmitz@cooper.edu
+  **Annotations Team:**  
+&nbsp;&nbsp;&nbsp;&nbsp;Lucia Rhode  
+&nbsp;&nbsp;&nbsp;&nbsp;Esther Wang  
+    
+## Problem Statement
+  Develop a means to estimate an individual's pose optimally and efficiently with an arbitrary low-cost stereo camera setup. 
+ 
+## Accomplishments
+  - Developed a triangulation algorithm to determine depth coordinate given 2D pose estimation output from OpenPose
+  - Developed script to support _N_ camera synchronization with OpenCV
+  - Incorporated an in-built calibration feature within source code
+  - Real-time 3D model synchronization with video feed via joint-angle estimation with 3D joint data
 
-Current Team: Aaron and Amaan
+## Current Status
+  - Fixing calibration bugs
+  - Developing Unity support with 3D joint data
+  - Starting custom 3D pose estimation model development
 
----------------------------------------------------------------------------
-
-Current Implementation includes:
-
--OpenCV stereo camera calibration (Aaron)
-
--Keypoint recovery using OpenPose and two USB cameras (Aaron)
-
--Triangulation using camera intrinsics/extrinsics and 2D keypoint data (Aaron)
-
--Multithreading to capture camera frames simultaneously (Amaan)
-
--Integrate multithreading with triangulation (Amaan)
-
--Easily selectable user options (Aaron)
-
--Create 2D annotation software using OpenCV (Aaron)
-
----------------------------------------------------------------------------
-To-Do(OUTDATED):
-
-*-Output 3D matrix and linked keypoints as JSON file (Aaron)
-
-*-Integrate electronJS with C++  (Amaan)
-
--Create GUI with integrated user options (Aaron)
-
--Translate 3D coordinates to skeleton for visualization in Unity (Aaron)
-
--Add support to wirelessly send data to a Raspberry Pi or as a radio signal (Aaron)
-
--Translate 3D coordinates to skeleton for visualization in Blender (Amaan)
-
----------------------------------------------------------------------------
-
-Future Plans:
-
--Android and IOS application to capture frames from two phones instead of two USB webcams (Aaron)
-
--Create custom models to use instead of OpenPose using TensorFlow
+## Goals
+  - Develop portable low-cost kit for 3D pose estimation algorithms
+  - Apply 3D pose estimation model to VR/AR and computer animation applications
+  - Develop iOS and Android support
+  - Migrate from stereo to monocular camera setup
