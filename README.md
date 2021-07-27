@@ -1,5 +1,2 @@
 ## 3D Position Estimation
-
-  **3D Pose Estimation Team:**  
-&nbsp;&nbsp;&nbsp;&nbsp;[Aaron Schmitz](mailto:aaron.schmitz@cooper.edu)
-&nbsp;&nbsp;&nbsp;&nbsp;[Amaan Rahman](mailto:amaan.rahman@cooper.edu)   
+by &nbsp;&nbsp;&nbsp;&nbsp;[Aaron Schmitz](mailto:aaron.schmitz@cooper.edu), &nbsp;&nbsp;&nbsp;&nbsp;[Amaan Rahman](mailto:amaan.rahman@cooper.edu), and &nbsp;&nbsp;&nbsp;&nbsp;[Dr. Mili Shah](mailto:mili.shah@cooper.edu) [Professor]
