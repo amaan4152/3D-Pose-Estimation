@@ -23,6 +23,8 @@ We offer a user-friendly and cost-effective way for individuals to utilize body 
 * OpenPose: https://github.com/CMU-Perceptual-Computing-Lab/openpose
   * OpenCV: https://opencv.org/
   * CMake: https://cmake.org/
+  * Google Logs: https://github.com/google/glog
+  * Google Flags: https://gflags.github.io/gflags/
 
 ### Setup: Ubuntu 20.04
 https://github.com/x4152/3D-Pose-Estimation/blob/Aaron/Install-Ubuntu.md
