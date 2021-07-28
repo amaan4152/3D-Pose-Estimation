@@ -22,3 +22,5 @@ We offer a user-friendly and cost-effective way for individuals to utilize body 
 * NVIDIA CUDA Toolkit: https://developer.nvidia.com/cuda-toolkit
 * OpenPose: https://github.com/CMU-Perceptual-Computing-Lab/openpose
   * OpenCV: https://opencv.org/
+
+### Setup: Windows
