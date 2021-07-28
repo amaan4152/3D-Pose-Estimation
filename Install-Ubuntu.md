@@ -7,4 +7,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    1. Check your device's drivers with the command: `ubuntu-drivers devices`
    2. Select the recommended driver for your hardware using `sudo apt install DRIVER-NAME`. For example, `sudo apt install nvidia-driver-470`.
    3. Restart your computer.
-3. 
+3. Install CMake GUI:
+   1. Run `sudo apt-get install cmake-qt-gui`
