@@ -12,4 +12,7 @@ We offer a user-friendly and cost-effective way for individuals to utilize body 
 
 
 ### Installation
-
+**Hardware Requirements**
+* NVIDIA CUDA compatible GPU: https://developer.nvidia.com/cuda-gpus
+* 2 USB webcams
+* Printed checkerboard pattern
