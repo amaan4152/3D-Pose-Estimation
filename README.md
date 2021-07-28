@@ -22,6 +22,7 @@ We offer a user-friendly and cost-effective way for individuals to utilize body 
 * NVIDIA CUDA Toolkit: https://developer.nvidia.com/cuda-toolkit
 * OpenPose: https://github.com/CMU-Perceptual-Computing-Lab/openpose
   * OpenCV: https://opencv.org/
+  * CMake: https://cmake.org/
 
 ### Setup: Ubuntu 20.04
 https://github.com/x4152/3D-Pose-Estimation/blob/Aaron/Install-Ubuntu.md
