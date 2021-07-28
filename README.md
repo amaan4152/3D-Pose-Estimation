@@ -23,4 +23,6 @@ We offer a user-friendly and cost-effective way for individuals to utilize body 
 * OpenPose: https://github.com/CMU-Perceptual-Computing-Lab/openpose
   * OpenCV: https://opencv.org/
 
-### Setup: Windows
+### Setup: Ubuntu 20.04
+
+### Setup: Windows 10
