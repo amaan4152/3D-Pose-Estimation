@@ -24,5 +24,6 @@ We offer a user-friendly and cost-effective way for individuals to utilize body 
   * OpenCV: https://opencv.org/
 
 ### Setup: Ubuntu 20.04
-
+https://github.com/x4152/3D-Pose-Estimation/blob/Aaron/Install-Ubuntu.md
 ### Setup: Windows 10
+https://github.com/x4152/3D-Pose-Estimation/blob/Aaron/Install-Windows.md
