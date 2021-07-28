@@ -6,3 +6,4 @@ This guide assumes a fresh install of Ubuntu 20.04. Other linux distros may func
 1. Dowload & install the latest Nvidia drivers:
    1. Check your device's drivers with the command: `ubuntu-drivers devices`
    2. Select the recommended driver for your hardware using `sudo apt install DRIVER-NAME`. For example, `sudo apt install nvidia-driver-470`.
+   3. Restart your computer.
