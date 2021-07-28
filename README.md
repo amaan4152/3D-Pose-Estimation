@@ -9,7 +9,7 @@ We offer a user-friendly and cost-effective way for individuals to utilize body 
 
 
 ## Overview
-![image](https://user-images.githubusercontent.com/70712042/127378122-c8bb110f-e991-4db8-ae40-a905ad22bac7.png)
+![image](https://user-images.githubusercontent.com/70712042/127378199-9559ca8f-1c7a-4a8a-9f18-98614a4eb68c.png)
 
 ## Installation
 **Requirements**
