@@ -51,7 +51,7 @@ libtbb2 libtbb-dev libdc1394-22-dev libopenexr-dev \
 libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev`.
    2. Download OpenCV by moving to a suitable directory and using `git clone https://github.com/opencv/opencv.git` and `git -C opencv checkout master`.
    3. Enter the newly created directory and use `mkdir -p build && cd build` to create the build directory.
-   4. Use `cmake ..` and ```` make j`nproc` ```` to configure and build OpenCV.
+   4. Use `cmake ..` and ```` make -j`nproc` ```` to configure and build OpenCV.
    5. Use `sudo make install` for a system-wide installation.
    6. Download the CameraCalibration folder, consisting of a .cpp file and a MakeFile.
    7. Enter its directory, and use `cmake .` and `make` to configure and build the Camera Calibration app.
@@ -62,4 +62,4 @@ libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev`.
    3. Install prerequisites using `sudo bash ./scripts/ubuntu/install_deps.sh`.
    4. Use `mkdir build && cd ./build` to create and enter the build directory.
    5. Use `cmake-gui ..` and select **Configure**. Wait until new options are shown highlighted in red, and select your preferences. Then, select **Configure** and **Generate** and close the GUI.
-   6. Build OpenPose using ```` make j`nproc` ````.
+   6. Build OpenPose using ```` make -j`nproc` ````.
