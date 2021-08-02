@@ -40,4 +40,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
       4. When running the .sh file to install CUDA, make sure that it does not say anything about existing packages. If it does, use `dpkg -l | grep nvidia` and `sudo apt purge name-of-package` until the dpkg command returns nothing.
       5. Use `sudo reboot` to restart your computer after the installation is complete, and boot normally. Assuming the installation is complete, the desktop should be visible and look normal. If this is not the case, something went wrong and recovery mode should be used to restore the Nouveau drivers so that Ubuntu can start properly.
       6. Ensure the installation was successful by checking Sotware & Updates > Additional Drivers and check for "Continue using a manually installed driver", and that a CUDA toolkit is located in /usr/local/.
-   3. Install cuDNN from [here](https://developer.nvidia.com/cudnn). Make sure to install cuDNN v8.0.4 for CUDA 11.1
+   3. Download cuDNN from [here](https://developer.nvidia.com/cudnn). Make sure to install cuDNN v8.0.4 for CUDA 11.1, Linux x86_64.
+   4. Install by extracting the downloaded file to /usr/local/cuda. 
