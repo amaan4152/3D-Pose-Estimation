@@ -19,3 +19,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    9. Run `./bootstrap` (Note: steps ix-xi take a while, and can be combined with `&&` between each command so user input is not required).
    10. Run ```` make -j`nproc` ````
    11. Run ```` sudo make install -j`nproc` ````
+   12. Make sure CMake is installed and is the correct version by checking Ubuntu's application list in the menu bar:
+      file:///home/munki57/Pictures/Screenshot%20from%202021-08-02%2012-37-56.png
