@@ -7,8 +7,18 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    1. Check your device's drivers with the command: `ubuntu-drivers devices`
    2. Select the recommended driver for your hardware using `sudo apt install DRIVER-NAME`. For example, `sudo apt install nvidia-driver-470`.
    3. Restart your computer.
-3. Install latest CMake GUI:
-   1. Run `sudo apt-get install build-essential` and `sudo apt-get install libssl-dev` to get prerequisites such as the g++ compiler and OpenSSL.
+3. Install protobuf:
+   1. Run `sudo apt-get install autoconf automake libtool curl make g++ unzip git` to get prerequisites.
+   2. Run `git clone https://github.com/google/protobuf.git` and enter the newly created directory (move to a suitable download loaction if you want).
+   3. Run `git submodule update --init --recursive`.
+   4. Run `./autogen.sh`.
+   5. Run `./configure`.
+   6. Run `make` (this may take a while, be patient!).
+   7. Run `make check`.
+   8. Run `sudo make install`
+   9. Run `sudo ldconfig`.
+5. Install latest CMake GUI:
+   1. Run `sudo apt-get install build-essential` and `sudo apt-get install libssl-dev` to get prerequisites.
    2. Purge any existing CMake-gui install using `sudo apt purge cmake-qt-gui`.
    3. Run `sudo apt-get install qtbase5-dev` for use in building CMake.
    4. Run `sudo apt-get update && sudo apt-get upgrade` to ensure everything is up to date.
@@ -20,4 +30,3 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    10. Run ```` make -j`nproc` ````
    11. Run ```` sudo make install -j`nproc` ````
    12. Make sure CMake is installed and is the correct version by checking Ubuntu's application list in the menu bar ![Screenshot](https://user-images.githubusercontent.com/70712042/127895411-07ad3984-3c8c-4c43-acb8-d67bec292ae2.png)
-4. 
