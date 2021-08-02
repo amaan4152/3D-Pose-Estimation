@@ -17,6 +17,7 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    7. Run `make check`.
    8. Run `sudo make install`
    9. Run `sudo ldconfig`.
+   10. Make sure the installation was successful by running `protoc --version`.
 5. Install latest CMake GUI:
    1. Run `sudo apt-get install build-essential` and `sudo apt-get install libssl-dev` to get prerequisites.
    2. Purge any existing CMake-gui install using `sudo apt purge cmake-qt-gui`.
