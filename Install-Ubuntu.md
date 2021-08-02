@@ -33,4 +33,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    12. Make sure CMake is installed and is the correct version by checking Ubuntu's application list in the menu bar ![Screenshot](https://user-images.githubusercontent.com/70712042/127895411-07ad3984-3c8c-4c43-acb8-d67bec292ae2.png)
 5. Install Nvidia CUDA & cuDNN:
    1. Go [here](https://developer.nvidia.com/cuda-11.1.1-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=2004) to install version 11.1.1 of CUDA for Ubuntu 20.04. **ONLY RUN THE WGET COMMAND FOR NOW:** `wget https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run`
-   2. Follow the [CUDA 11.1.1 runfile installation instructions](https://docs.nvidia.com/cuda/archive/11.1.1/cuda-installation-guide-linux/index.html#runfile) **carefully**. Follow every step, and make sure you know what each step is doing!
+   2. Follow the [CUDA 11.1.1 runfile installation instructions](https://docs.nvidia.com/cuda/archive/11.1.1/cuda-installation-guide-linux/index.html#runfile) **carefully**. Follow every step, and make sure you know what each step is doing! Some help for particular steps are offered:
+      1. To
