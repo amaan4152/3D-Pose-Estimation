@@ -42,3 +42,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
       6. Ensure the installation was successful by checking Sotware & Updates > Additional Drivers and check for "Continue using a manually installed driver", and that a CUDA toolkit is located in /usr/local/.
    3. Download cuDNN from [here](https://developer.nvidia.com/cudnn). Make sure to install cuDNN v8.0.4 for CUDA 11.1, Linux x86_64.
    4. Install by extracting the downloaded file to /usr/local/cuda. Detailed instructions can be found [here](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-tar).
+6. Install OpenCV and the camera calibration app.
+   1. Install OpenCV using 
