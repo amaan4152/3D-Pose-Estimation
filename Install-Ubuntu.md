@@ -47,3 +47,6 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    2. Enter the newly created directory and use `mkdir -p build && cd build` to create the build directory.
    3. Use `cmake ..` and ```` make j`nproc` ```` to configure and build OpenCV.
    4. Use `sudo make install` for a system-wide installation.
+   5. Download the CameraCalibration folder, consisting of a .cpp file and a MakeFile.
+   6. Enter its directory, and use `cmake .` and `make` to configure and build the Camera Calibration app.
+   7. Launch the application using `./CameraCalibCV`. You may calibrate your cameras now if you wish, but make sure the application functions properly before continuing.
