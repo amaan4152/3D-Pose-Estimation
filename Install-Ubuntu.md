@@ -17,4 +17,4 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    7. Extract the tar file using `tar -zxvf FILENAME` and enter the newly created directory.
    8. Run `./configure --qt-gui` (Make sure you are in the right directory!).
    9. Run `./bootstrap` (Note: steps ix-xi take a while, and can be combined with `&&` between each command so user input is not required).
-   10. Run ````make -j\`nproc\`````
+   10. Run ```` make -j`nproc` ````
