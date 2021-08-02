@@ -20,4 +20,4 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    10. Run ```` make -j`nproc` ````
    11. Run ```` sudo make install -j`nproc` ````
    12. Make sure CMake is installed and is the correct version by checking Ubuntu's application list in the menu bar:
-      [image]file:///home/munki57/Pictures/Screenshot%20from%202021-08-02%2012-37-56.png
+      ![image](file:///home/munki57/Pictures/Screenshot%20from%202021-08-02%2012-37-56.png)
