@@ -34,4 +34,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
 5. Install Nvidia CUDA & cuDNN:
    1. Go [here](https://developer.nvidia.com/cuda-11.1.1-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=2004) to install version 11.1.1 of CUDA for Ubuntu 20.04. **ONLY RUN THE WGET COMMAND FOR NOW:** `wget https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run`
    2. Follow the [CUDA 11.1.1 runfile installation instructions](https://docs.nvidia.com/cuda/archive/11.1.1/cuda-installation-guide-linux/index.html#runfile) **carefully**. Follow every step, and make sure you know what each step is doing! Some help for particular steps are offered:
-      1. Uninstall both the Nvidia Drivers **AND** blacklist the Nouveau drivers. To uninstall all Nvidia-related items, use `sudo apt-get remove --purge '^nvidia-.*'`
+      1. Uninstall both the Nvidia Drivers **AND** blacklist the Nouveau drivers. To uninstall all Nvidia-related items, use `sudo apt-get remove --purge '^nvidia-.*'` **MAKE SURE YOU KNOW WHAT TO DO WHEN REBOOTING YOUR COMPUTER, SINCE YOU WON'T HAVE A DRIVER UNTIL CUDA IS INSTALLED**
+      2. 
