@@ -8,7 +8,7 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    2. Select the recommended driver for your hardware using `sudo apt install DRIVER-NAME`. For example, `sudo apt install nvidia-driver-470`.
    3. Restart your computer.
 3. Install latest CMake GUI:
-   1. Go to https://cmake.org/download/ and download the latest **Linux x86_64 Binary distribution**.
+   1. Go to https://cmake.org/download/ and download the latest **Linux x86_64 Binary distribution** tar file.
    2. Navigate to the download location using the terminal.
    3. Extract the .tar file using `tar -zxvf FILENAME.tar` and enter the newly created cmake folder.
    4. Run `sudo apt-get install build-essential` to get prerequisites such as the g++ compiler.
