@@ -7,17 +7,6 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    1. Check your device's drivers with the command: `ubuntu-drivers devices`
    2. Select the recommended driver for your hardware using `sudo apt install DRIVER-NAME`. For example, `sudo apt install nvidia-driver-470`.
    3. Restart your computer.
-3. Install protobuf:
-   1. Run `sudo apt-get install autoconf automake libtool curl make g++ unzip git` to get prerequisites.
-   2. Run `git clone https://github.com/google/protobuf.git` and enter the newly created directory (move to a suitable download loaction if you want).
-   3. Run `git submodule update --init --recursive`.
-   4. Run `./autogen.sh`.
-   5. Run `./configure`.
-   6. Run `make` (this may take a while, be patient!).
-   7. Run `make check`.
-   8. Run `sudo make install`
-   9. Run `sudo ldconfig`.
-   10. Make sure the installation was successful by running `protoc --version`.
 4. Install latest CMake GUI:
    1. Run `sudo apt-get install build-essential` and `sudo apt-get install libssl-dev` to get prerequisites.
    2. Purge any existing CMake-gui install using `sudo apt purge cmake-qt-gui`.
@@ -57,8 +46,7 @@ libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev`.
    7. Enter its directory, and use `cmake .` and `make` to configure and build the Camera Calibration app.
    8. Launch the application using `./CameraCalibCV`. You may calibrate your cameras now if you wish, but make sure the application functions properly before continuing.
 7. Install OpenPose
-   1. Download OpenPose using `git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose`, enter the created directory, and download submodules using `git submodule update --init --recursive --remote`.
-   2. Go to the 3rdparty directory with `cd 3rdparty/` and manually copy Caffe using `git clone https://github.com/CMU-Perceptual-Computing-Lab/caffe.git`. 
+   1. Download OpenPose using `git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose`.
    3. Install prerequisites using `sudo bash ./scripts/ubuntu/install_deps.sh`.
    4. Use `mkdir build && cd ./build` to create and enter the build directory.
    5. Use `cmake-gui ..` and select **Configure**. Wait until new options are shown highlighted in red, and select your preferences. Then, select **Configure** and **Generate** and close the GUI.
