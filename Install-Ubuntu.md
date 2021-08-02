@@ -58,7 +58,8 @@ libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev`.
    8. Launch the application using `./CameraCalibCV`. You may calibrate your cameras now if you wish, but make sure the application functions properly before continuing.
 7. Install OpenPose
    1. Download OpenPose using `git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose`, enter the created directory, and download submodules using `git submodule update --init --recursive --remote`.
-   2. Install prerequisites using `sudo bash ./scripts/ubuntu/install_deps.sh`.
-   3. Use `mkdir build && cd ./build` to create and enter the build directory.
-   4. Use `cmake-gui ..` and select **Configure**. Wait until new options are shown highlighted in red, and select your preferences. Then, select **Configure** and **Generate** and close the GUI.
-   5. 
+   2. Go to the 3rdparty directory with `cd 3rdparty/` and manually copy Caffe using `git clone https://github.com/CMU-Perceptual-Computing-Lab/caffe.git`. 
+   3. Install prerequisites using `sudo bash ./scripts/ubuntu/install_deps.sh`.
+   4. Use `mkdir build && cd ./build` to create and enter the build directory.
+   5. Use `cmake-gui ..` and select **Configure**. Wait until new options are shown highlighted in red, and select your preferences. Then, select **Configure** and **Generate** and close the GUI.
+   6. Build OpenPose using ```` make j`nproc` ````.
