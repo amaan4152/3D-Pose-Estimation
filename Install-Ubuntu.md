@@ -45,4 +45,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
 6. Install OpenCV and the camera calibration app.
    1. Download OpenCV by moving to a suitable directory and using `git clone https://github.com/opencv/opencv.git` and `git -C opencv checkout master`.
    2. Enter the newly created directory and use `mkdir -p build && cd build` to create the build directory.
-   3. Use `cmake ..` and ```` make j`nproc` ```` to configure and build OpenCV
+   3. Use `cmake ..` and ```` make j`nproc` ```` to configure and build OpenCV.
+   4. Use `sudo make install` for a system-wide installation.
