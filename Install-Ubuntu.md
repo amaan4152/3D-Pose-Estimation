@@ -31,3 +31,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    10. Run ```` make -j`nproc` ````
    11. Run ```` sudo make install -j`nproc` ````
    12. Make sure CMake is installed and is the correct version by checking Ubuntu's application list in the menu bar ![Screenshot](https://user-images.githubusercontent.com/70712042/127895411-07ad3984-3c8c-4c43-acb8-d67bec292ae2.png)
+6. Install Nvidia CUDA & cuDNN:
+   1. 
