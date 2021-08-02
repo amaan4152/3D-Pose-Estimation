@@ -8,9 +8,13 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    2. Select the recommended driver for your hardware using `sudo apt install DRIVER-NAME`. For example, `sudo apt install nvidia-driver-470`.
    3. Restart your computer.
 3. Install latest CMake GUI:
-   1. Go to https://cmake.org/download/ and download the latest **Linux x86_64 Binary distribution** tar file.
-   2. Navigate to the download location using the terminal.
-   3. Extract the .tar file using `tar -zxvf FILENAME.tar` and enter the newly created cmake folder.
-   4. Run `sudo apt-get install build-essential` to get prerequisites such as the g++ compiler.
-   5. Run `sudo ./bootstrap` (Make sure you are in the cmake directory!).
-   6. 
+   1. Run `sudo apt-get install build-essential` and `sudo apt-get install libssl-dev` to get prerequisites such as the g++ compiler and OpenSSL.
+   2. Purge any existing CMake-gui install using `sudo apt purge cmake-qt-gui`.
+   3. Run `sudo apt-get install qtbase5-dev` for use in building CMake.
+   4. Run `sudo apt-get update && sudo apt-get upgrade` to ensure everything is up to date.
+   5. Go to https://cmake.org/download/ and download the latest **Unix Source distribution** tar file.
+   6. Navigate to the download location using the terminal.
+   7. Extract the tar file using `tar -zxvf FILENAME` and enter the newly created directory.
+   8. Run `./configure --qt-gui` (Make sure you are in the right directory!).
+   9. Run `./bootstrap` (Note: steps 9-11 take a while, and can be combined with `&&` between each command so user input is not required).
+   10. Run `make -j``nproc```
