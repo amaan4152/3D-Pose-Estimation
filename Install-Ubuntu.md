@@ -18,7 +18,7 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    8. Run `sudo make install`
    9. Run `sudo ldconfig`.
    10. Make sure the installation was successful by running `protoc --version`.
-5. Install latest CMake GUI:
+4. Install latest CMake GUI:
    1. Run `sudo apt-get install build-essential` and `sudo apt-get install libssl-dev` to get prerequisites.
    2. Purge any existing CMake-gui install using `sudo apt purge cmake-qt-gui`.
    3. Run `sudo apt-get install qtbase5-dev` for use in building CMake.
@@ -31,5 +31,5 @@ This guide assumes a fresh install of Ubuntu 20.04. Some software conflicts with
    10. Run ```` make -j`nproc` ````
    11. Run ```` sudo make install -j`nproc` ````
    12. Make sure CMake is installed and is the correct version by checking Ubuntu's application list in the menu bar ![Screenshot](https://user-images.githubusercontent.com/70712042/127895411-07ad3984-3c8c-4c43-acb8-d67bec292ae2.png)
-6. Install Nvidia CUDA & cuDNN:
+5. Install Nvidia CUDA & cuDNN:
    1. 
