@@ -12,4 +12,5 @@ Week 1:
   Back to Cooper! Mostly focused on settling in and learning more about Marvin.
 Week 2:
   Finalized database structure for MySQL. It uses a schema called keypoint_management consisting of individual tables for each body, which stores keypoint_id and keypoint_value
-  as the appropriate database. Worked on modeling a head for Marvin in Solidworks; need to measure Kinects to create modular design.
+  as the appropriate database. Worked on modeling a head for Marvin in Solidworks; need to measure Kinects to create modular design. Looked into pre-built options for buying a
+  server and started a spreadsheet for Amaan and I to organize our own parts if we want to build it ourselves.
