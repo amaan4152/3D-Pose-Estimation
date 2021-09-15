@@ -1,0 +1,15 @@
+Fall 2021 Notebook
+
+Semester Goals:
+  1. Create a server system to distribute 3D position estimation data across the cooper network. A server will need to be purchased and a LAN port opened for a MySQL server
+    using the created database structure used to send/receive data in real-time to multiple devices.
+  2. Fix Marvin, solving his boundary issues and switching from Kinect cameras to USB webcams running my algorithm. This will require rewriting the motor controller
+    using ROS or Arduino and moving the system from Ubuntu 18.04 to 20.04.
+    
+Weekly Updates:
+
+Week 1:
+  Back to Cooper! Mostly focused on settling in and learning more about Marvin.
+Week 2:
+  Finalized database structure for MySQL. It uses a schema called keypoint_management consisting of individual tables for each body, which stores keypoint_id and keypoint_value
+  as the appropriate database. Worked on modeling a head for Marvin in Solidworks; need to measure Kinects to create modular design.
