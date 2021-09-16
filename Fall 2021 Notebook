@@ -1,4 +1,5 @@
 Fall 2021 Notebook
+Aaron Schmitz
 
 Semester Goals:
   1. Create a server system to distribute 3D position estimation data across the cooper network. A server will need to be purchased and a LAN port opened for a MySQL server
