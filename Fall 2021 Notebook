@@ -9,6 +9,13 @@ Semester Goals:
     
 Weekly Updates:
 
+Week 3:
+  Continued to work on Marvin's head, included tolerance allowances for joints; Progress slowed by formula test day. Evaluated Marvin's code; it appears to rely heavily on the
+  Azure Kinect SDK (including all interaction with ROS) and does not properly incorporate feedback process controls. Most notably, there is a 1 second delay between updates
+  which is likely the source of the "lag" in response time. The motors are updated using simple trigonometric relations, and are bound from -pi/2 to pi/2 to ensure freedom
+  of motion. Unfortunately, this bound for each motor includes possibilities (like at all pi/2) where Marvin hits himself. A feedback control system should be introduced to
+  update the motors in real-time with more accuracy while incorporating a dynamic boundary system instead of the constant boundaries being used.
+
 Week 2:
   Finalized database structure for MySQL. It uses a schema called keypoint_management consisting of individual tables for each body, which stores keypoint_id and keypoint_value
   as the appropriate database. Worked on modeling a head for Marvin in Solidworks; need to measure Kinects to create modular design. Looked into pre-built options for buying a
