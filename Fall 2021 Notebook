@@ -8,6 +8,14 @@ Semester Goals:
     using ROS or Arduino and moving the system from Ubuntu 18.04 to 20.04.
     
 Weekly Updates:
+Week 4:
+  Got sick and had to focus on catching up on classes, so didn't get too much done. Researched more about how Marvin was made: it appears both arms are the same open-software
+  and open-hardware OpenManipulatorX (https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/#opensoftware) that is still being maintained. However, it also
+  uses the Azure Kinect SDK, which appears to not have been updated since 2019 and requires Ubuntu 18.04. OpenManipulatorX does include a variety of camera options here
+  (https://emanual.robotis.com/docs/en/platform/openmanipulator_x/ros_perceptions/#install-camera-package) that could be used instead of the kinect when combined with my
+  program, including the raspberry pi camera. Additionally, the updatePosition does rely on orientation as well, which is produced with the triangulation function used
+  in my program, though it is never updated in Marvin's program. It could be a potential way to reduce error, but would require testing the accuracy of my program's
+  output.
 
 Week 3:
   Continued to work on Marvin's head, included tolerance allowances for joints; Progress slowed by formula test day. Evaluated Marvin's code; it appears to rely heavily on the
@@ -27,7 +35,53 @@ Week 1:
 /////////////////////////////////////////////////////////
 
 WEEKLY UPDATE - AARON AND AMAAN - SPRING SEMESTER 2021
+-----Week 13-----
+Aaron completed the final comments and peer reviews for VIP, and focused on finals.
+-----Week 12-----
+Aaron edited together and submitted the VIP video.
+-----Week 11-----
+Aaron further tested the calibration issues with the software to make sure it was a program error. He tested it with a checkerboard on a white background and with less frames,
+but still had issues with the length of time for stereo calibration.
+-----Week 10-----
+Aaron prepared and submitted the poster and abstract for the SIGGRAPH 2021 Conference.
+-----Week 9-----
+Aaron worked on integrating the Unity IK rig with the keypoint output from the detection code.
+-----Week 8-----
+Aaron focused on exams.
+-----Week 7-----
+Amaan developed script to set up Kahan openpose with 3D pose estimation code; working on recording keypoint data in Blender; 
+still working on fixing calibration issue for laptop.
 
+Aaron switched from the standard Animation Controller to use the Animation Rigging preview in Unity. It is designed for real-time animation edits, instead of relying
+on pre-built animations that make real-time updates extremely difficult with the controller. He implemented a way to control the arms of a model using inverse kinematics,
+and is working on combining the previous JSON output of keypoint data with the new IK-compatible real-time rig.
+-----Week 6-----
+Aaron continued working on improving the Unity model.
+
+Amaan is still working on fixing calibration issue in laptop. 
+-----Week 5-----
+Aaron put together the VIP video, and successfully imported 3D keypoint data to control a game object in Unity using its built-in JSON API.
+
+Amaan is still working on fixing the calibration issue in laptop.
+-----Week 4-----
+Amaan fixed the upper body angles over estimation problem and completely implemented the lower body synchronization for Blender model. However, there needs to be more 
+on legs orientation; developed a proper demo. Working on optimizing the pose algorithm and configuring the laptop with the Blender and openpose setup. Furthermore, working
+with Lucia and Esther on implementing a semi-supervised CNN for generating an automated training dataset. 
+
+Aaron decided to shift from DLLs to using JSON data due to difficulties conbining the unity and C++ code without stopping the program. He decided on
+what is considered a desireable open-source JSON generator called RapidJSON (https://rapidjson.org/) and is working to implement it into the original code and C#.
+-----Week 3-----
+Aaron continued work on the skeleton rig.
+
+Amaan met up with Lucia and Esther to discuss a plan on how to automate annotation process to generate a training dataset. In search for existing 
+automated annotation programs and currently developing a program to setup an automated annotation program. 
+-----Week 2-----
+Aaron started working on a unity skeleton rig. The current plan is to use the multi-position constraint and the multi-rotation constraint in conjunction with
+the c++ program to work in real time with an interactive skeleton, while also adding on the Oculus head as the 'base' of the rig.
+
+Amaan configured the Aaron-Amaan code in the Linux system; setup Blender code as well. Still working on Blender documentation writeup.
+Was reading upon different calibration methods; currently working on calibrating the stereo camera setup with the laptop at Cooper
+and packaging the Blender demo program.
 -----Week 1-----
 Aaron figured out how to generate and implement DLLs, allowing C++ code to work through Unity and its C# scripting. See 
 https://levelup.gitconnected.com/integrating-native-c-c-libraries-with-unity-as-plugins-a-step-by-step-guide-17ad70c2e3b4
@@ -39,99 +93,56 @@ Amaan attempted to setup a camera space in the lab at Cooper, but the Autonomy L
 the Openpose build due to "pthreads" library issues; this is a resolvable problem, probably due to the library not being 
 in PATH, needs Caffe dependency installed separately, or needs updates.
 
------Week 2-----
-Aaron started working on a unity skeleton rig. The current plan is to use the multi-position constraint and the multi-rotation constraint in conjunction with
-the c++ program to work in real time with an interactive skeleton, while also adding on the Oculus head as the 'base' of the rig.
-
-Amaan configured the Aaron-Amaan code in the Linux system; setup Blender code as well. Still working on Blender documentation writeup.
-Was reading upon different calibration methods; currently working on calibrating the stereo camera setup with the laptop at Cooper
-and packaging the Blender demo program.
-
------Week 3-----
-Aaron continued work on the skeleton rig.
-
-Amaan met up with Lucia and Esther to discuss a plan on how to automate annotation process to generate a training dataset. In search for existing 
-automated annotation programs and currently developing a program to setup an automated annotation program. 
-
------Week 4-----
-Amaan fixed the upper body angles over estimation problem and completely implemented the lower body synchronization for Blender model. However, there needs to be more 
-on legs orientation; developed a proper demo. Working on optimizing the pose algorithm and configuring the laptop with the Blender and openpose setup. Furthermore, working
-with Lucia and Esther on implementing a semi-supervised CNN for generating an automated training dataset. 
-
-Aaron decided to shift from DLLs to using JSON data due to difficulties conbining the unity and C++ code without stopping the program. He decided on
-what is considered a desireable open-source JSON generator called RapidJSON (https://rapidjson.org/) and is working to implement it into the original code and C#.
-
------Week 5-----
-Aaron put together the VIP video, and successfully imported 3D keypoint data to control a game object in Unity using its built-in JSON API.
-
-Amaan is still working on fixing the calibration issue in laptop.
-
------Week 6-----
-Aaron continued working on improving the Unity model.
-
-Amaan is still working on fixing calibration issue in laptop. 
-
------Week 7-----
-Amaan developed script to set up Kahan openpose with 3D pose estimation code; working on recording keypoint data in Blender; 
-still working on fixing calibration issue for laptop.
-
-Aaron switched from the standard Animation Controller to use the Animation Rigging preview in Unity. It is designed for real-time animation edits, instead of relying
-on pre-built animations that make real-time updates extremely difficult with the controller. He implemented a way to control the arms of a model using inverse kinematics,
-and is working on combining the previous JSON output of keypoint data with the new IK-compatible real-time rig.
-
------Week 8-----
-Aaron focused on exams.
-
------Week 9-----
-Aaron worked on integrating the Unity IK rig with the keypoint output from the detection code.
-
------Week 10-----
-Aaron prepared and submitted the poster and abstract for the SIGGRAPH 2021 Conference.
-
------Week 11-----
-Aaron further tested the calibration issues with the software to make sure it was a program error. He tested it with a checkerboard on a white background and with less frames,
-but still had issues with the length of time for stereo calibration.
-
------Week 12-----
-Aaron edited together and submitted the VIP video.
-
------Week 13-----
-Aaron completed the final comments and peer reviews for VIP, and focused on finals.
-
 //////////////////////////////////////////////
 
 Weekly Update - Fall 2020
 Amaan and Aaron
-
----------Week 1----------
-  Aaron created a working model of a 3D pose estimator
-using two USB cameras, OpenCV and OpenPose over the summer.
-Amaan created this GitHub and worked on creating an implementation of
-multithreading using OpenPose.
----------Week 2----------
-  Aaron presented his work to NIST on 9/8, and Amaan finished his 
-multithreading implementation. Aaron also created a task list
-to assign and track upcoming tasks.
----------Week 3----------
-  Aaron revised his pose estimation program to include hand support,
-allow for easy switching between keypoints and created more well-defined
-user options. Amaan fully implemented his multithreading into Aaron's
-code, so that a single unified program was created.
----------Week 4----------
-  Aaron researched GUI work environments to use with the program, and
-Amaan worked on Blender support to visualize the 3D keypoint output.
-The GUI was narrowed down to two choices: electronJS and Qt.
----------Week 5----------
-  Aaron created test environments in electronJS and Qt, and decided to
-continue working with electronJS because of its lightweight nature. He
-also started to learn Unity, and is working on creating a 3D worldspace
-to represent a point cloud. Amaan also worked with electronJS and has
-created a skeleton rig to be synced using the blender API.
-  Amaan parsed triangulated 3D coordinates of each keypoint into a JSON 
-file. He then, created a python script to parse through the JSON outfile 
-in Blender and generate an Armature object with bone objects that contain 
-a head-tail pair of coordinates that correspond to their approprioate keypoint
-3D coordinates from the JSON outfile.
+---------Week 17----------
+Amaan was reading upon different calibration methods; currently working on calibrating the stereo camera setup with the laptop at Cooper
+and packaging the Blender demo program. 
+---------Week 16----------
+Amaan configured the Aaron-Amaan code in the Linux system; setup Blender code as well. Still working on Blender documentation writeup. 
+---------Week 15----------
+Aaron tested the VR setup of the Oculus Quest, but focused mainly on presentation prep and finals. He ran into an issue regarding a crash on startup, likely related to account
+issues related to Facebook.
+Amaan attempted to setup a camera space in the lab at Cooper, but the Autonomy Lab laptop had issues with making
+the Openpose build due to "pthreads" library issues; this is a resolvable problem, probably due to the library not being 
+in PATH, needs Caffe dependency installed separately, or needs updates. 
+---------Week 14----------
+Aaron created an MQTT server using the open-source distributor Mosquitto on a Windows subsystem for Linux to create a system where data can be distributed and protected
+between devices, to be connected to Pia's hand, phone cameras and the GUI/Main program.
+Amaan imported a sample free model and rigged the default aramture for a clean Openpose-Blender sync. 
+---------Week 13----------
+Aaron put together a simple way to connect to a Pi over the internet, but needs to make sure that security permissions are ok for Pia.
+Amaan was learning how to rig and weight paint intricate meshes with a default armatur object in Blender. 
+---------Week 12----------
+Aaron continued cleaning up the GUI and worked on a wireless connection between a computer and a raspberry pi to send data to the hand.
+Amaan has finished pose-Blender rigging. All issues have been fixed all with a hidden function in Blender Python API. I cry. 
+Amaan also proceeded with trial test on imported character rig. Pose syncing wasn't the best due to the model having
+a skeleton setup of its own causing setup issues. 
+---------Week 11----------
+  Aaron completed the framework for the GUI. 
+Amaan attempted to replace current rotation configuration for current Blender rig with the local->global rotational matrix transformations.
+---------Week 10----------
+  Aaron worked on implementing the GUI using electronJS, javascript and HTML
+  Amaan read papers on global-local coordinate axis transformations and various pose angle calc implementations
+such as atan2 and dot product. 
+---------Week 9----------
+  Aaron visited his sister.
+  Amaan fixed a lot of issues with the rotational smoothness and syncing of the Blender rig. Real-time
+rotational updates has also been added to the program through Modal Timer Operator. The results are not perfect, but have improved drastically
+compared to the last rig test. This was done through altering local coordinate axis and linear interpolation. 
+---------Week 8----------
+  Aaron created a 2D annotator using OpenCV for the evaluation team to use. It runs through a directory, 
+checks for image files, and allows the user to annotate a variable number of keypoints. It then outputs a
+csv file for each image.
+  Amaan is currently working on getting rid of rotational extremeties that are high in frequency. 
+---------Week 7----------
+  Aaron worked on implementing the GUI with electronJS. He started with a boilerplate
+called electron-forge and worked on familiarizing himself with javascript and html.
+He implemented the framework for the mock GUI, but more work is necessary to complete it.
+  Amaan successfully synced Blender frames with Openpose frames. He has been implenting various
+interpolation functions in Blender for smooth rotational animations. 
 ---------Week 6----------
   Aaron created a mock GUI on paper for a launcher for the program. 
 The program was split into three modular components: the source, which
@@ -147,49 +158,32 @@ structure can have its pose apporpriately updated. The joint-angle has to be
 represented as quaternions to avoid Gimbal Lock. The armature's 3D location is
 to be calculated by either finding the average of all Z coordinates of all keypoints
 or select the main body's Z coordinate. This is to be done at the moment.
----------Week 7----------
-  Aaron worked on implementing the GUI with electronJS. He started with a boilerplate
-called electron-forge and worked on familiarizing himself with javascript and html.
-He implemented the framework for the mock GUI, but more work is necessary to complete it.
-  Amaan successfully synced Blender frames with Openpose frames. He has been implenting various
-interpolation functions in Blender for smooth rotational animations. 
----------Week 8----------
-  Aaron created a 2D annotator using OpenCV for the evaluation team to use. It runs through a directory, 
-checks for image files, and allows the user to annotate a variable number of keypoints. It then outputs a
-csv file for each image.
-  Amaan is currently working on getting rid of rotational extremeties that are high in frequency. 
----------Week 9----------
-  Aaron visited his sister.
-  Amaan fixed a lot of issues with the rotational smoothness and syncing of the Blender rig. Real-time
-rotational updates has also been added to the program through Modal Timer Operator. The results are not perfect, but have improved drastically
-compared to the last rig test. This was done through altering local coordinate axis and linear interpolation. 
----------Week 10----------
-  Aaron worked on implementing the GUI using electronJS, javascript and HTML
-  Amaan read papers on global-local coordinate axis transformations and various pose angle calc implementations
-such as atan2 and dot product. 
----------Week 11----------
-  Aaron completed the framework for the GUI. 
-Amaan attempted to replace current rotation configuration for current Blender rig with the local->global rotational matrix transformations.
----------Week 12----------
-Aaron continued cleaning up the GUI and worked on a wireless connection between a computer and a raspberry pi to send data to the hand.
-Amaan has finished pose-Blender rigging. All issues have been fixed all with a hidden function in Blender Python API. I cry. 
-Amaan also proceeded with trial test on imported character rig. Pose syncing wasn't the best due to the model having
-a skeleton setup of its own causing setup issues. 
----------Week 13----------
-Aaron put together a simple way to connect to a Pi over the internet, but needs to make sure that security permissions are ok for Pia.
-Amaan was learning how to rig and weight paint intricate meshes with a default armatur object in Blender. 
----------Week 14----------
-Aaron created an MQTT server using the open-source distributor Mosquitto on a Windows subsystem for Linux to create a system where data can be distributed and protected
-between devices, to be connected to Pia's hand, phone cameras and the GUI/Main program.
-Amaan imported a sample free model and rigged the default aramture for a clean Openpose-Blender sync. 
----------Week 15----------
-Aaron tested the VR setup of the Oculus Quest, but focused mainly on presentation prep and finals. He ran into an issue regarding a crash on startup, likely related to account
-issues related to Facebook.
-Amaan attempted to setup a camera space in the lab at Cooper, but the Autonomy Lab laptop had issues with making
-the Openpose build due to "pthreads" library issues; this is a resolvable problem, probably due to the library not being 
-in PATH, needs Caffe dependency installed separately, or needs updates. 
----------Week 16----------
-Amaan configured the Aaron-Amaan code in the Linux system; setup Blender code as well. Still working on Blender documentation writeup. 
----------Week 17----------
-Amaan was reading upon different calibration methods; currently working on calibrating the stereo camera setup with the laptop at Cooper
-and packaging the Blender demo program. 
+---------Week 5----------
+  Aaron created test environments in electronJS and Qt, and decided to
+continue working with electronJS because of its lightweight nature. He
+also started to learn Unity, and is working on creating a 3D worldspace
+to represent a point cloud. Amaan also worked with electronJS and has
+created a skeleton rig to be synced using the blender API.
+  Amaan parsed triangulated 3D coordinates of each keypoint into a JSON 
+file. He then, created a python script to parse through the JSON outfile 
+in Blender and generate an Armature object with bone objects that contain 
+a head-tail pair of coordinates that correspond to their approprioate keypoint
+3D coordinates from the JSON outfile.
+---------Week 4----------
+  Aaron researched GUI work environments to use with the program, and
+Amaan worked on Blender support to visualize the 3D keypoint output.
+The GUI was narrowed down to two choices: electronJS and Qt.
+---------Week 3----------
+  Aaron revised his pose estimation program to include hand support,
+allow for easy switching between keypoints and created more well-defined
+user options. Amaan fully implemented his multithreading into Aaron's
+code, so that a single unified program was created.
+---------Week 2----------
+  Aaron presented his work to NIST on 9/8, and Amaan finished his 
+multithreading implementation. Aaron also created a task list
+to assign and track upcoming tasks.
+---------Week 1----------
+  Aaron created a working model of a 3D pose estimator
+using two USB cameras, OpenCV and OpenPose over the summer.
+Amaan created this GitHub and worked on creating an implementation of
+multithreading using OpenPose.
