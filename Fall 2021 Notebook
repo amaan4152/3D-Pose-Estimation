@@ -8,6 +8,13 @@ Semester Goals:
     using ROS or Arduino and moving the system from Ubuntu 18.04 to 20.04.
     
 Weekly Updates:
+Week 5:
+  Installed ROS Noetic (http://wiki.ros.org/noetic), the most up-to-date version of ROS 1, which is focused on Ubuntu 20.04 which I already use for the position estimation
+  functionality. This will mean that using the old Kinect API that requires Ubuntu 18.04 isn't a possibility, but since I plan to move away from that regardless it isn't an
+  issue. Also began to work with the ros_control package (http://wiki.ros.org/ros_control). ROS 1 was chosen instead of ROS 2 since ros2_control is still under development
+  (https://discourse.ros.org/t/announcing-ros2-control-for-foxy/18274). Compatibility with OpenManipulatorX and noetic exists, though OpenManipulatorX doesn't appear to have
+  PID controller functionality, so using ROS directly might be a better option. Will discuss reinstalling the OS (or using a different computer) so I can work with Marvin in
+  person.
 Week 4:
   Got sick and had to focus on catching up on classes, so didn't get too much done. Researched more about how Marvin was made: it appears both arms are the same open-software
   and open-hardware OpenManipulatorX (https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/#opensoftware) that is still being maintained. However, it also
