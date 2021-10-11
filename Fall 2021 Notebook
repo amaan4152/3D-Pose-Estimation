@@ -8,6 +8,10 @@ Semester Goals:
     using ROS or Arduino and moving the system from Ubuntu 18.04 to 20.04.
     
 Weekly Updates:
+Week 6:
+  Worked on creating a Gazebo simulation in ROS for Marvin. Researched the Universal Robot Description Format (URDF), which consists of joints and links with defined
+  properties. This also includes collision meshes to prevent issues with self-collision. Also applying ros_control's libraries to create a Gazebo simulation. Still need to
+  finish simulation before VIP video.
 Week 5:
   Installed ROS Noetic (http://wiki.ros.org/noetic), the most up-to-date version of ROS 1, which is focused on Ubuntu 20.04 which I already use for the position estimation
   functionality. This will mean that using the old Kinect API that requires Ubuntu 18.04 isn't a possibility, but since I plan to move away from that regardless it isn't an
