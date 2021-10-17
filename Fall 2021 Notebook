@@ -8,6 +8,10 @@ Semester Goals:
     using ROS or Arduino and moving the system from Ubuntu 18.04 to 20.04.
     
 Weekly Updates:
+Week 7:
+  Finished Gazebo sim of Marvin, recreating the previous group's work on Ubuntu 20.04 and ROS noetic. Initially had 3D position data being used as input for inverse kinematics,
+  but ran into an issue with my OpenPose install that broke it. Marvin sim itself is fully functional, without any of the weird errors I've been getting with the 18.04 version.
+  Also edited together the group VIP video.
 Week 6:
   Worked on creating a Gazebo simulation in ROS for Marvin. Researched the Universal Robot Description Format (URDF), which consists of joints and links with defined
   properties. This also includes collision meshes to prevent issues with self-collision. Also applying ros_control's libraries to create a Gazebo simulation. Still need to
