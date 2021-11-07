@@ -8,6 +8,10 @@ Semester Goals:
     using ROS or Arduino and moving the system from Ubuntu 18.04 to 20.04.
     
 Weekly Updates:
+Week 10:
+  Set up SSH connection to server, as well as installed BlazePose and ROS on the server. Plan to move from personal desktop to server for good.
+Week 9:
+  Continued to work on Gazebo sim, now switching to BlazePose as the keypoint provider due to issues with OpenPose. Also did initial setup of server.
 Week 8:
   Had to focus on midterms, so not much progress made this week.
 Week 7:
