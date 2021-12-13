@@ -8,6 +8,20 @@ Semester Goals:
     using ROS or Arduino and moving the system from Ubuntu 18.04 to 20.04.
     
 Weekly Updates:
+Week 15:
+  Switched from Blazepose C++ install to Blazepose python install, setting up environment and edited VIP video together!
+Week 14:
+  Attempted to fix SSH errors that Lucia experienced but struggled to find the cause. Also tried to bugfix a broken installation of BlazePose on my personal computer, which is
+  running into issues related to a Google API called bazel. Eventually found a workaround by messing with VPNs and changing commands, but making changes seems to be difficult.
+Week 13:
+  Set up multiple installations of Ubuntu 20.04 on the server to accommodate for Luica and Nishat's research, allowing the user to boot into their own operating system
+  on a restart. This was done because of incompatibilites between software as well as the requirement for multiple different graphics card drivers.
+Week 12:
+  Continued working on server environment for Marvin, but keep running into issues relating to other programs. In particular, Anaconda has incompatibility issues with ROS's
+  catkin-make which makes it difficult. Found a workaround, but progress slowed.
+Week 11:
+  Installed drivers on server for OpenCR motor controllers to be used with Marvin, as well as helped Lucia with server usage and installation of DeepLabCut and EfficientPose(?)
+  since they weren't sure how to do certain things and what permissions they had.
 Week 10:
   Set up SSH connection to server, as well as installed BlazePose and ROS on the server. Plan to move from personal desktop to server for good.
 Week 9:
